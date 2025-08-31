@@ -2,41 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SyncSpace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncSpace - Watch YouTube Together</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/da412b289c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="landing-container">
-    <header>
-      <h1 class="logo">SyncSpace 🎬</h1>
-      <p class="tagline">Watch YouTube together. Anywhere.</p>
-    </header>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">SyncSpace</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <div class="card">
-        <button class="btn" onclick="createRoom()">Create Room</button>
-        <div class="join">
-          <input id="roomId" type="text" placeholder="Enter Room ID">
-          <button class="btn" onclick="joinRoom()">Join Room</button>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Watch YouTube Together, Anywhere</h1>
+      <p>SyncSpace lets couples and friends enjoy YouTube videos in sync with real-time chat. No distance, just vibes.</p>
+      <a href="#features" class="btn">Get Started</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube Illustration">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Why SyncSpace?</h2>
+    <div class="feature-container">
+      <div class="feature-box">
+        <i class="fas fa-link"></i>
+        <h3>Share Links</h3>
+        <p>Paste any YouTube link and watch together instantly.</p>
       </div>
-    </main>
+      <div class="feature-box">
+        <i class="fas fa-search"></i>
+        <h3>Search Videos</h3>
+        <p>Find videos directly from YouTube without leaving SyncSpace.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-comments"></i>
+        <h3>Live Chat</h3>
+        <p>Talk in real-time while enjoying your favorite content.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <p>Made with ❤️ for friends & couples</p>
-    </footer>
-  </div>
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About SyncSpace</h2>
+    <p>
+      SyncSpace is built for people who want to stay connected while apart. 
+      Whether it’s movie nights with your partner or funny clips with friends, 
+      you’ll always stay in sync.
+    </p>
+  </section>
 
-  <script>
-    function createRoom() {
-      const roomId = Math.random().toString(36).substring(2, 8);
-      window.location.href = `room.html?room=${roomId}`;
-    }
-    function joinRoom() {
-      const roomId = document.getElementById("roomId").value.trim();
-      if (roomId) window.location.href = `room.html?room=${roomId}`;
-    }
-  </script>
+  <!-- Footer -->
+  <footer id="footer">
+    <p>Made with ❤️ by Sam</p>
+    <div class="socials">
+      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
 </body>
 </html>
