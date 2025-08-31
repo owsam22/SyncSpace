@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SyncSpace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="landing-container">
+    <header>
+      <h1 class="logo">SyncSpace 🎬</h1>
+      <p class="tagline">Watch YouTube together. Anywhere.</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <button class="btn" onclick="createRoom()">Create Room</button>
+        <div class="join">
+          <input id="roomId" type="text" placeholder="Enter Room ID">
+          <button class="btn" onclick="joinRoom()">Join Room</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ for friends & couples</p>
+    </footer>
+  </div>
+
+  <script>
+    function createRoom() {
+      const roomId = Math.random().toString(36).substring(2, 8);
+      window.location.href = `room.html?room=${roomId}`;
+    }
+    function joinRoom() {
+      const roomId = document.getElementById("roomId").value.trim();
+      if (roomId) window.location.href = `room.html?room=${roomId}`;
+    }
+  </script>
+</body>
+</html>
