@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SyncSpace - Watch YouTube Together</title>
+  <title>WatchTogether - Landing</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/da412b289c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Navigation -->
   <header>
     <nav class="navbar">
-      <div class="logo">SyncSpace</div>
+      <div class="logo">WatchTogether</div>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#how">How It Works</a></li>
         <li><a href="#footer">Contact</a></li>
       </ul>
     </nav>
@@ -22,56 +21,54 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Watch YouTube Together, Anywhere</h1>
-      <p>SyncSpace lets couples and friends enjoy YouTube videos in sync with real-time chat. No distance, just vibes.</p>
-      <a href="#features" class="btn">Get Started</a>
-    </div>
-    <div class="hero-img">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube Illustration">
-    </div>
+    <h1>Watch Videos Together, Anytime</h1>
+    <p>Share laughs, reactions, and memories. Create a room and watch videos in sync with your friends.</p>
+    <button class="hero-btn" onclick="createRoom()">Start Watching</button>
   </section>
 
-  <!-- Features -->
-  <section class="features" id="features">
-    <h2>Why SyncSpace?</h2>
-    <div class="feature-container">
-      <div class="feature-box">
-        <i class="fas fa-link"></i>
-        <h3>Share Links</h3>
-        <p>Paste any YouTube link and watch together instantly.</p>
+  <!-- Features Section -->
+  <main id="features">
+    <h2 class="section-title">Main Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Create Private Rooms</h3>
+        <p>Instantly create a room with one click and share it with your friends.</p>
       </div>
-      <div class="feature-box">
-        <i class="fas fa-search"></i>
-        <h3>Search Videos</h3>
-        <p>Find videos directly from YouTube without leaving SyncSpace.</p>
+      <div class="feature-card">
+        <h3>Watch Together</h3>
+        <p>Play, pause, and sync videos in real time for everyone in the room.</p>
       </div>
-      <div class="feature-box">
-        <i class="fas fa-comments"></i>
-        <h3>Live Chat</h3>
-        <p>Talk in real-time while enjoying your favorite content.</p>
+      <div class="feature-card">
+        <h3>Chat While Watching</h3>
+        <p>Talk, react, and vibe while streaming videos together.</p>
       </div>
     </div>
-  </section>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <h2>About SyncSpace</h2>
-    <p>
-      SyncSpace is built for people who want to stay connected while apart. 
-      Whether it’s movie nights with your partner or funny clips with friends, 
-      you’ll always stay in sync.
-    </p>
-  </section>
+    <!-- Interactive Feature -->
+    <div class="room-card">
+      <h2>Create or Join a Room</h2>
+      <div class="actions">
+        <button class="btn" onclick="createRoom()">+ Create Room</button>
+        <div class="join">
+          <input id="roomId" type="text" placeholder="Enter Room ID">
+          <button class="btn" onclick="joinRoom()">Join</button>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- Footer -->
   <footer id="footer">
-    <p>Made with ❤️ by Sam</p>
-    <div class="socials">
-      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <div class="footer-content">
+      <p>© 2025 WatchTogether | Built with ❤️</p>
+      <div class="socials">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
